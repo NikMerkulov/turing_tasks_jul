@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unit 2</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="step-1">
+      <h2>Список покупок</h2>
+      <ul type="square">
+        <li>Морковь</li>
+        <li>Картофель</li>
+        <li>Крупа гречневая</li>
+        <li>Курица</li>
+      </ul>
+      <hr>
+      <h2>Список языков и технологий к изучению</h2>
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+      </ol>
+      <hr>
+      <h2>Смешанный список</h2>
+      <ol>
+        <li>
+          Elem 1
+          <ul type="circle">
+            <li>
+              Elem 1-1
+              <ul type="square">
+                <li>Elem 1-1-1</li>
+                <li>Elem 1-1-2</li>
+              </ul>
+            </li>
+            <li>
+              Elem 1-2
+              <ul type="square">
+                <li>Elem 1-2-1</li>
+                <li>Elem 1-2-2</li>
+              </ul>
+            </li>
+            <li>Elem 1-3</li>
+          </ul>
+        </li>
+        <li>
+          Elem 2
+          <ul type="circle">
+            <li>
+              Elem 2-1
+              <ol>
+                <li>Elem 2-1-1</li>
+                <li>Elem 2-1-2</li>
+              </ol>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <div class="step-2">
+      <img src="./src/images/flower-scenery.jpg" width="25%" alt="Цветы, размер = 25%">
+      <img src="./src/images/flower-scenery.jpg" width="50%" alt="Цветы, размер = 50%">
+      <img src="./src/images/flower-scenery.jpg" width="100%" alt="Цветы, размер = 100%">
+    </div>
+    <div class="step-3">
+      <img id="browsers" src="./src/images/browsers.png" width=100% alt="Браузеры" usemap="#browsers">
+      <map id="browsers-map" name="browsers">
+        <area
+          shape="circle"
+          coords="185, 215, 180"
+          href="https://www.microsoft.com/ru-ru/edge"
+          alt="Microsoft Edge"
+          target="_new"
+        >
+        <area
+          shape="circle"
+          coords="475, 215, 170"
+          href="https://www.mozilla.org/ru/firefox/new"
+          alt="Firefox"
+          target="_new"
+        >
+        <area
+          shape="circle"
+          coords="770, 215, 180"
+          href="https://www.google.com/intl/ru_ru/chrome"
+          alt="Google Chrome"
+          target="_new"
+        >
+        <area
+          shape="circle"
+          coords="350, 520, 150"
+          href="https://www.opera.com/ru"
+          alt="Opera"
+          target="_new"
+        >
+        <area
+          shape="circle"
+          coords="630, 520, 170"
+          href="https://browser.yandex.ru"
+          alt="Yandex Browser"
+          target="_new"
+        >
+      </map>
+    </div>
+    <div class="step-4">
+      <h2>Что внутри <q>head</q>?</h2>
+      <p>Элемент head <b>HTML</b>-документа не отображается на странице в веб-браузере. Он содержит такую информацию, как:</p>
+      <ul type="cirle">
+        <li><i>заголовок</i> (title) страницы</li>
+        <li>ссылки на файлы <i><b>CSS</b></i> (если вы хотите применить к вашему <b>HTML</b> стили <b>CSS</b>)</li>
+        <li>ссылки на иконки</li>
+        <li>другие метаданные (данные о <b>HTML</b>: автор и важные ключевые слова, описывающие документ.)</li>
+      </ul>
+    </div>
+    <div class="step-5">
+      <picture>
+        <source srcset="./src/images/browsers.png" media="(max-width: 600px)">
+        <img src="./src/images/flower-scenery.jpg" width="100%" alt="Цветы">
+      </picture>
+      <h2>Измените размер страницы до 600px<br>чтобы увидеть изменение.</h2>
+    </div>
+    <div class="step-6">
+      <h2>Категории контента</h2>
+      <p>Каждый элемент <b>HTML</b> принадлежит некоторому количеству категорий контента, которые объединяют элементы с общим набором
+        характеристик. Такая группировка является свободной, то есть не задаёт на самом деле отношение между элементами таких типов,
+        но помогает определить и описать их поведение и правила, которым они должны следовать, особенно когда дело доходит до сложных
+        деталей. Также возможна ситуация, когда элемент не входит <i>ни в одну</i> из этих категорий.
+      </p>
+      <p>Существует три типа категорий контента:</p>
+      <ol>
+        <li><b><u>Основные</u></b> категории контента, описывающие общие для многих элементов правила</li>
+        <li>Категории контента для <b><u>элементов форм</u></b>, описывающие общие правила для элементов форм</li>
+        <li><b><u>Особые</u></b> категории контента, описывающие редкие категории, актуальные только для нескольких элементов, возможно
+        лишь в особом контексте</li>
+      </ol>
+    </div>
+  </body>
+</html>
