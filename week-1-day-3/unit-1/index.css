@@ -1,0 +1,46 @@
+body {
+  background-color: rgb(34, 39, 49);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+body > div {
+  padding-bottom: 36px;
+}
+td, th{
+  padding: 10px;
+  border: 2px solid white;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.step-1 {
+  display: flex;
+  justify-content: right;
+}
+.step-2, .step-4 table{
+  text-align: center;
+}
+.step-3 tbody {
+  text-align: start;
+}
+.step-3 thead {
+  text-align: end;
+}
+.id {
+  width: 20%;
+}
+.names {
+  width: 30%;
+}
+.discription {
+  width: 50%;
+}
+.step-5 table{
+  width: 50%;
+  text-align: center;
+}
+.purpose {
+  width: 50%;
+}
