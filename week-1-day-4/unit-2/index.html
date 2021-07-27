@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1 Day 4 Unit 2</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="step-1">
+      <ul type="a">
+        <li>
+          <fieldset>
+            <legend>Checkbox</legend>
+            <input type="checkbox" name="checkbox" />
+            <input type="checkbox" name="checkbox" disabled />
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>File</legend>
+            <input type="file" name="file" />
+            <input type="file" name="file" disabled />
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Image</legend>
+            <input
+              type="image"
+              src="./src/images/arrow.png"
+              alt="Arrow"
+              width="50px"
+            />
+            <input
+              type="image"
+              src="./src/images/arrow.png"
+              alt="Arrow"
+              width="50px"
+              disabled
+            />
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Password</legend>
+            <input type="password" name="password" />
+            <input type="password" name="password" disabled />
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Text</legend>
+            <input type="text" name="text" />
+            <input type="text" name="text" disabled />
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Email</legend>
+            <input type="email" name="email" />
+            <input type="email" name="email" disabled />
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <legend>Date</legend>
+            <input type="date" name="date" />
+            <input type="date" name="date" disabled />
+          </fieldset>
+        </li>
+      </ul>
+    </div>
+    <div class="step-2">
+      <button>Hi there</button>
+      <input type="button" value="General Kenobi" />
+    </div>
+    <div class="step-3">
+      <div class="left">
+        <input type="radio" name="same" value="phoneNumber" id="phoneNumber" />
+        <input type="radio" name="same" value="E-mail" id="E-mail" />
+        <input type="radio" name="same" value="Facebook" id="Facebook" />
+      </div>
+      <div class="right">
+        <label for="phoneNumber">Phone Number</label>
+        <label for="E-mail">E-mail</label>
+        <label for="Facebook">Facebook</label>
+      </div>
+    </div>
+    <div class="step-4">
+      <textarea name="area" rows="3" maxlength="100"></textarea>
+    </div>
+    <div class="step-5">
+      <textarea name="area" maxlength="10000"></textarea>
+    </div>
+    <div class="step-6">
+      <div class="left">
+        <label for="favPet">Choose your favourite pet</label>
+        <select name="pets" id="favPet">
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+          <option value="parrot">Parrot</option>
+          <option value="guinea-pig">Guinea Pig</option>
+          <option value="hamster">Hamster</option>
+          <option value="snake">Snake</option>
+          <option value="goldfish">Goldfish</option>
+        </select>
+      </div>
+      <div class="right">
+        <label for="pets" action>Choose pets you like</label>
+        <select name="pets" id="pets" multiple>
+          <option value="cat">Cat</option>
+          <option value="dog">Dog</option>
+          <option value="parrot">Parrot</option>
+          <option value="guinea-pig">Guinea Pig</option>
+          <option value="hamster">Hamster</option>
+          <option value="snake">Snake</option>
+          <option value="goldfish">Goldfish</option>
+        </select>
+      </div>
+    </div>
+    <div class="step-7">
+      <label for="firstWay">First way</label>
+      <input type="text" name="text" id="firstWay" />
+      <label>Second Way <input type="text" name="secondWay" /></label>
+    </div>
+    <div class="step-8">
+      <fieldset>
+        <legend>Log in</legend>
+        <label>E-mail: <input type="email" name="form-email-input" tabindex="3"/></label>
+        <label
+          >Password: <input type="password" name="form-password-input" tabindex="2"
+        /></label>
+        <button type="submit" tabindex="1">Log in</button>
+      </fieldset>
+    </div>
+  </body>
+</html>
