@@ -1,0 +1,306 @@
+body {
+  background-color: rgb(35, 40, 50);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  letter-spacing: 0.02em;
+  font-size: 14pt;
+  padding: 0 20px;
+}
+body > * {
+  margin-bottom: 20px;
+}
+.step-1 {
+  display: flex;
+}
+.step-1 div {
+  position: relative;
+  margin-right: 20px;
+  counter-reset: triangles;
+}
+.point-left {
+  width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-right: 100px solid white;
+}
+.point-right {
+  width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 100px solid;
+}
+.point-up {
+  width: 0; 
+  height: 0; 
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 100px solid white;
+}
+.point-down {
+  width: 0; 
+  height: 0; 
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid white;
+}
+.step-2,.step-3, .step-4, .step-7, .step-8, .step-13 {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  box-shadow: 0 0 16px 2px black;
+}
+.step-2 > p::first-letter {
+  font-size: 20pt;
+  color: blue;
+}
+.step-3 {
+  position: relative;
+}
+.step-3 p::first-line {
+  font-style: italic;
+  text-decoration: overline;
+}
+.step-4 p:first-of-type:hover {
+  color: cornflowerblue;
+}
+.step-4 p:last-of-type:hover {
+  color: orangered;
+}
+.step-5 input, .step-6 input {
+  padding: 5px;
+  font-size: 16pt;
+}
+.step-5 input::placeholder{
+  padding: 5px;
+  color: cornflowerblue;
+  background-color: lightgrey;
+}
+.step-6 input {
+  width: 40%;
+  box-shadow: 0 0 20px 0 white;
+}
+.step-6 input::placeholder {
+  color: brown;
+}
+.step-7 {
+  position: relative;
+}
+.step-7 p::first-letter {
+  margin-left: 20px;
+}
+.step-7 p::before {
+  content: '';
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid orangered;
+}
+.step-8 {
+  counter-reset: paragraphs;
+}
+.step-8 p {
+  counter-increment: paragraphs;
+}
+.step-8 p::before {
+  content: 'Абзац ' counter(paragraphs)': ';
+  position: relative;
+}
+.step-9 li:nth-child(4), .step-10 li:nth-child(odd) {
+  color: cornflowerblue;
+  font-size: 20pt;
+}
+.step-11 input, .step-12 input {
+  appearance: none;
+  background-color: lightgrey;
+  width: 40px;
+  height: 40px;
+  opacity: .7;
+}
+.step-12 input {
+  border-radius: 50%;
+}
+.step-11 input:checked, .step-12 input:checked {
+  opacity: 1;
+  appearance: none;
+  background: red;
+  box-shadow: 0 0 20px 10px red;
+}
+.step-12 input:checked {
+  border-radius: 50%;
+}
+.step-13 p:not(.test){
+  color: orangered;
+}
+.step-14 li:not(:first-child) {
+  color: orangered;
+}
+/* step-15 */
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: red;
+  box-shadow: inset 0 0 6px 4px rgba(0, 0, 0, .3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(35, 40, 50);
+  box-shadow: inset 0 0 6px 2px rgba(255, 255, 255, .3);
+}
+/* step-16 */
+/* 1-st */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d52927;ss
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 40px;
+  background-color: white; 
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, .7);
+}  */
+
+/* 2-nd */
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.6);
+} */
+
+/* 3-rd */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient( #33baf1 50%, #00abed 50%);
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* 4-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: repeating-linear-gradient(45deg, #ffad33, #ffad33 70px, #ffad33 70px, #ffad33 140px);
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* 5-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: linear-gradient(darkblue, cornflowerblue, cornflowerblue 70%);
+}
+::-webkit-scrollbar-track {
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* 6-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+  box-shadow: inset 0 0 0 2px black;
+} */
+
+/* 7-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#fe9901, #fe9901 25%, #ffad33 25%, #ffad33 50%, #fe9901 50%, #fe9901 75%, #ffad33 75%);
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* 8-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: linear-gradient(#aaa, #aaa 25%, #888 25%, #888 50%, #aaa 50%, #aaa 75%, #888 75%);
+}
+::-webkit-scrollbar-track {
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* 9-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: linear-gradient(90deg, #8fb3ff, #8fb3ff 25%, #3366ff 25%, #3366ff 50%, #8fb3ff 50%, #8fb3ff 75%, #3366ff 75%);
+}
+::-webkit-scrollbar-track {
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.5);
+} */
+
+/* 10-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: linear-gradient(#d62a28 10%, #811717, #d62a28 90%);
+}
+::-webkit-scrollbar-track {
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.8);
+} */
+
+/* 11-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#fff, #888 25%, #000 75%);
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+  box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.8);
+} */
+
+/* 12-th */
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: linear-gradient(#188e20, #54d95a, #188e20);
+}
+::-webkit-scrollbar-track {
+  border-radius: 40px;
+  background-color: white;
+  box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, 0.3);
+} */
