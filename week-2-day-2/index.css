@@ -1,0 +1,160 @@
+body {
+  background-color: rgb(35, 40, 50);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  letter-spacing: 0.02em;
+  font-size: 14pt;
+  padding: 0 20px;
+}
+body > div {
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+}
+p {
+  margin: 0;
+}
+.step-1 {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+}
+.step-1:hover {
+  transition: background-color 1s, color 1s 1s;
+  background-color: blue;
+  color: red;
+}
+.step-2 {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+  transition: transform 3s ease-in;
+}
+.step-2:hover {
+  transform: scale(40, 20);
+}
+.step-3 {
+  position: fixed;
+  right: 30px;
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+}
+.step-3::before {
+  content: 'Step 3';
+  position: absolute;
+  top: 40%;
+  left: 22%;
+  color: black;
+}
+.step-4 {
+  box-shadow: none;
+}
+.step-4 > input[type="checkbox"] {
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+  width: 40px;
+  height: 40px;
+}
+.step-4 > input[type="checkbox"]:focus {
+  position: relative;
+  left: 50%;
+  transform: scale(2, 1.5);
+}
+.step-5 {
+  width: 1000px;
+  height: 60px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.progress-bar {
+  position: relative;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  background-image: linear-gradient(90deg, green, lightgreen);
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .5);
+  z-index: -2;
+}
+.progress-bar::before {
+  content: '';
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: rgb(35, 40, 50);
+  z-index: -1;
+  transition: transform 2s cubic-bezier(.7, .05, 1, 1);
+}
+.step-5:hover .progress-bar::before{
+  transform: translateX(100%);
+}
+.step-6 {
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+}
+.step-6 > span {
+  cursor: default;
+  animation: rotate 5s infinite;
+  position: absolute;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(-60px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-60px) rotate(-360deg);;
+  }
+}
+.step-7 {
+  box-shadow: none;
+}
+.step-7 div {
+  height: 40px;
+  width: 40px;
+  background-color: pink;
+  transition: width 2s ease-in-out;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+}
+.step-7 input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+}
+.step-7 input[type="checkbox"]:checked ~ div {
+  width: 100%;
+}
+.step-8 {
+ height: 300px;
+ width: 300px;
+ background-color: teal;
+}
+.step-8 div {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: orangered;
+  animation: movingInCircle 4s infinite;
+  position: relative;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+@keyframes movingInCircle {
+  0% { top: 0; left: 0; }
+  25% { top: 0; left: calc(100% - 60px); }
+  50% { top: calc(100% - 60px); left: calc(100% - 60px); }
+  75% { top: calc(100% - 60px); left: 0; }
+  100% { top: 0; left: 0; }
+}
+.step-9 {
+  display: flex;
+  justify-content: center;
+  box-shadow: none;
+}
+.step-9 > img {
+  width: 60px;
+  animation: loading 3s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+}
+@keyframes loading {
+  100% { transform: rotate(360deg) }
+}
