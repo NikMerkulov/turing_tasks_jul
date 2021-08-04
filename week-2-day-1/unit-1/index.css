@@ -62,10 +62,10 @@ body > * {
   font-style: italic;
   text-decoration: overline;
 }
-.step-4 p:first-of-type:hover {
+.step-4 p:first-of-type::selection {
   color: cornflowerblue;
 }
-.step-4 p:last-of-type:hover {
+.step-4 p:last-of-type::selection {
   color: orangered;
 }
 .step-5 input, .step-6 input {
