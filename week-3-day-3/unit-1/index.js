@@ -11,7 +11,7 @@ a = 0
 for (a; a < 10; a++) {}
 console.log(a)
 // 2
-//while (true) if (prompt('"Завершить"') === 'Завершить') break
+while (true) if (prompt('"Завершить"') === 'Завершить') break
 // 3
 let odd = []
 for (let i = 0; i < 20; i++) if (i % 2 === 1) odd.push(i)
