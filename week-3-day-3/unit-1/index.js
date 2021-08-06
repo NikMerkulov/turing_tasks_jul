@@ -78,9 +78,8 @@ scope()
 scope.call(obj.emptyFunc)
 scope.call(obj.emptyFunc1)
 // 11
-const sqr = number => number * number
 const squarePow = (number, callback) => callback(callback(number))
-console.log(squarePow(5, sqr), Math.pow(5, 4))
+console.log(squarePow(5, number => number * number), Math.pow(5, 4))
 // 12
 const curry = (func) => function curried(...args) {
   if (args.length >= func.length) {
