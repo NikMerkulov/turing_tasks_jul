@@ -46,14 +46,14 @@ const greetings = (name = "гость") => console.log(`Здраствуйте, 
 greetings()
 // 5
 const fibonacci = (range) => {
-  if (range <= 1) return 1
+  if (range < 2) return range
   return fibonacci(range - 1) + fibonacci(range - 2)
 }
-console.log(fibonacci(42))
+console.log(fibonacci(7))
 // 6
 const fibonacci1 = (range) => {
-  let a = 1,
-    b = 0,
+  let b = 1,
+    a = 0,
     temp
   while (range >= 0) {
     temp = a
@@ -63,4 +63,4 @@ const fibonacci1 = (range) => {
   }
   return b
 }
-console.log(fibonacci1(42))
+console.log(fibonacci1(7))
