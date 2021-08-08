@@ -15,7 +15,7 @@ window.onload = () => {
 
   const styleDiv = document.querySelector('#styleDiv')
   styleDiv.style.backgroundColor = 'orangered'
-  // Если задать стили напрямую через style, то все стили элемента обнулятся и запишутся новые.
+  // Если задать стили напрямую через style, то они запишутся в элемент в HTML и поломают дефолтные стили.
   // 4
 
   const list = document.querySelector('#list'),
