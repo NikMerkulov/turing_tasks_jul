@@ -10,9 +10,10 @@ console.log(is_date([1, 2, 4, 0]))
 console.log('////////// 2 //////////')
 
 const curday = (separator = '/') => {
-  const curDate = new Date
-  return curDate.getDay() + separator + curDate.getMonth() + separator + curDate.getFullYear()
+  const curDate = Intl.DateTimeFormat('en-UK', {day: "2-digit", month: "2-digit", year: "numeric", }).format(new Date)
+  return curDate.toString().split('').map(el => isNaN(el) ? separator : el).join('')
 }
+console.log(curday('.'))
 console.log(curday('-'))
 //3
 console.log('////////// 3 //////////')
