@@ -1,0 +1,52 @@
+body {
+  font-size: 20pt;
+}
+body * {
+  margin: 10px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+#offset {
+  position: fixed;
+  left: 90%;
+  top: 60px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, .4);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, .5);
+  width: 80px;
+}
+table {
+  border-spacing: 15px;
+}
+td {
+  width: 50px;
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+}
+input {
+  align-self: center;
+  height: 20px;
+  width: 200px;
+  position: relative;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+li {
+  cursor: pointer;
+}
+.active { 
+  border-color: orangered;
+  border-width: 3px;
+  outline: none;
+}
