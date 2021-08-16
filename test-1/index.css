@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+th {
+  border: 3px solid white;
+  user-select: none;
+}
+th:last-child {
+  position: relative;
+  cursor: pointer;
+}
+th:last-child > span {
+  position: absolute;
+  visibility: hidden;
+  top: 100%;
+  left: -170%;
+  background-color: rgba(222, 222, 222, .5);
+  padding: 8px;
+  border-radius: 8px;
+}
+tr > td {
+  padding: 10px 5px;
+  border: 3px solid white;
+  width: 100%;
+  vertical-align: middle;
+}
+tr > td > select {
+  width: 100%;
+}
+tr > td > input {
+  width: 98%;
+}
+col.null {
+  width: 50px;
+}
+thead > tr {
+  background-color: #d5dce2;
+}
+tbody > tr:nth-child(2n-1) {
+  background-color: #e5e5e5;
+}
+tbody > tr:nth-child(2n) {
+  background-color: #d5d5d5;
+}
+#addNew {
+  width: 99%;
+  margin: 5px;
+  height: 40px;
+}
