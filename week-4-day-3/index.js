@@ -54,11 +54,7 @@ random().catch(err => { // 8
   console.log('Promise finished it\'s work')
 })
 // 9
-const allEven = array => {
-  const temp = []
-  array.forEach(el => {el % 2 === 0 ? temp.push(el) : undefined})
-  return temp
-}
+const allEven = array => array.filter(el => el % 2 === 0)
 const arrSum = array => {
   let temp = 0
   for (const i of array) {
@@ -66,6 +62,7 @@ const arrSum = array => {
   }
   return temp
 }
-const sumEven = new Promise(resolve => {
-  resolve(allEven([4, 6, 5, 7, 1, 2, 2, 9, -1, -12]))
-}).then(result => arrSum(result)).then(result => console.log(`Sigma male: ${result}`))
+const sumEven = new Promise(reject => {
+  const even = allEven([4, 6, 5, 7, 1, 2, 2, 9, -1, -12])
+  reject(even)
+}).catch(result => console.log(arrSum(result)))
