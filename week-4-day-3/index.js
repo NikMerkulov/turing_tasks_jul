@@ -28,17 +28,17 @@ input.nextElementSibling.addEventListener('click', startTimer)
 const getRandomBetween = (min, max) => Math.round((max - min) * Math.random() + min),
 array = []
 for (let i = 0; i < 30; i++) array.push(getRandomBetween(5, 15))
-console.log(array)
+console.log('Task 4: ', array)
 // 5
 const promise = new Promise((resolve, reject) => {
-  console.log('Starting promise...')
+  console.log('Task 5: Starting promise...')
   setTimeout(() => {
-    resolve(console.log('Promise completed.'))
+    resolve(console.log('Task 5: Promise completed.'))
 // 6
     return new Promise((resolve, reject) => {
-      console.log('Starting new promise...')
+      console.log('Task 6: Starting new promise...')
       setTimeout(() => {
-        reject('Promise failed.')
+        reject('Task 6: Promise failed.')
       }, 3000)
     })
   }, 3000)
@@ -46,12 +46,14 @@ const promise = new Promise((resolve, reject) => {
 // 7
 const random = () => new Promise((resolve, reject) => {
   const number = Math.round(Math.random() * 20)
-  number < 10 ? resolve(console.log(`Generated number: ${number}`)) : reject(`Generated number is greater than 10: ${number}`)
+  number < 10 ?
+    resolve(console.log(`Task 7: Generated number: ${number}`)) :
+    reject(`Task 7: Generated number is greater than 10: ${number}`)
 })
 random().catch(err => { // 8
-  console.log('Error: ' + err)
+  console.log('Task 7: Error: ' + err)
 }).then(() => {
-  console.log('Promise finished it\'s work')
+  console.log('Task 7: Promise finished it\'s work')
 })
 // 9
 const allEven = array => array.filter(el => el % 2 === 0)
@@ -62,7 +64,24 @@ const arrSum = array => {
   }
   return temp
 }
-const sumEven = new Promise(reject => {
-  const even = allEven([4, 6, 5, 7, 1, 2, 2, 9, -1, -12])
-  reject(even)
-}).catch(result => console.log(arrSum(result)))
+const sumEven = array => new Promise((resolve, reject) => reject(allEven(array)))
+  .catch(result => arrSum(result))
+  .then(result => console.log('Task 9: Result: ', result))
+sumEven([4, 6, 5, 7, 1, 2, 2, 9, -1, -12])
+// 10
+async function sumEven1(array) {
+  throw new Error(await allEven(array))
+}
+sumEven1([4, 6, 5, 7, 1, 2, 2, 9, -1, -12])
+  .catch(result => arrSum((result.message.split(',').map(el => Number(el)))))
+  .then(result => console.log('Task 10: Result: ', result))
+// 11
+new Promise((resolve, reject) => {
+  reject('False alarm')
+}).catch(result => console.log('Task 11: ' + result))
+// 12
+const promise1 = Promise.resolve('promise1')
+const promise2 = Promise.resolve('promise2')
+const promise3 = Promise.resolve('promise3')
+Promise.race([promise1, promise2, promise3]).then(result => console.log('Race: ' + result))
+Promise.all([promise1, promise2, promise3]).then(results => console.log('All: ' + results))
