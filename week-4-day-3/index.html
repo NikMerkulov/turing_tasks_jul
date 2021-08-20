@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial;
+    }
+    #clock {
+      font-size: 42pt;
+      font-weight: bold;
+    }
+    p {
+      font-size: 20pt;
+    }
+    span {
+      font-weight: bolder;
+    }
+  </style>
+  <title>Week 4 Day 3</title>
+</head>
+<body>
+  <div id="clock"></div>
+  <p>Seconds left to end of the day:<span id="seconds"></span></p>
+  <div>
+    <input type="text" id="timerInput" placeholder="Enter seconds">
+    <button>Start</button>
+  </div>
+  <p id="timerDisplay">0 seconds left</p>
+  </div>
+</body>
+</html>
